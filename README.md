@@ -35,3 +35,35 @@ export class ClientePageComponent {
   ];
 
 }
+
+ouuuu
+
+
+<div class="cliente-container">
+  <h2>Lista de Clientes</h2>
+  <ul>
+    <li *ngFor="let cliente of clientes">
+      <strong>{{ cliente.nome }}</strong> - {{ cliente.email }}
+    </li>
+  </ul>
+</div>
+
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-cliente-page',
+  templateUrl: './cliente-page.component.html',
+  styleUrls: ['./cliente-page.component.css']
+})
+export class ClientePageComponent implements OnInit {
+  clientes = [
+    { nome: 'João Silva', email: 'joao@gmail.com' },
+    { nome: 'Maria Oliveira', email: 'maria@hotmail.com' },
+    { nome: 'Carlos Souza', email: 'carlos@yahoo.com' }
+  ];
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+}
